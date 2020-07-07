@@ -7,6 +7,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   crop.associate = function(models) {
     // associations can be defined here
+    models.crop.belongsTo(model.field)
+    models.crop.hasMany(model.user)
   };
   return crop;
 };
