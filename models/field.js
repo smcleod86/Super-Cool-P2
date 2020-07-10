@@ -9,8 +9,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   field.associate = function(models) {
     // associations can be defined here
-    models.field.belongsToMany(models.users)
-    models.field.hasOne(model.crop)
+    //models.field.belongsToMany(models.users)
+    //models.field.hasOne(model.crop)
   };
   return field;
 };

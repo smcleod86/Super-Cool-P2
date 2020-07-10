@@ -46,8 +46,8 @@ module.exports = function(sequelize, DataTypes) {
 
     user.associate = function(models) {
         // TODO: any user associations you want
-        models.user.hasMany(models.field)
-        models.user.hasMany(model.crop)
+        //models.user.hasMany(models.field)
+        //models.user.hasMany(model.crop)
     }
     
 
