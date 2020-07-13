@@ -14,7 +14,7 @@ module.exports = {
       crop: {
         type: Sequelize.STRING
       },
-      acerage: {
+      acreage: {
         type: Sequelize.STRING
       },
       createdAt: {

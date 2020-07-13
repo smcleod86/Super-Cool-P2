@@ -7,8 +7,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   field.associate = function(models) {
     // associations can be defined here
-    //models.field.belongsTo(models.user)
-    models.field.belongsToMany(models.user, { through: "userfields" })
+    models.field.belongsTo(models.user)
+    models.field.belongsToMany(models.user, { through: "usersfields" })
   };
   return field;
 };
