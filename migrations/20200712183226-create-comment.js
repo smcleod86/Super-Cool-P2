@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('fields', {
+    return queryInterface.createTable('comments', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -11,16 +11,10 @@ module.exports = {
       userId: {
         type: Sequelize.INTEGER
       },
-      cropId: {
+      fieldId: {
         type: Sequelize.INTEGER
       },
-      unit: {
-        type: Sequelize.STRING
-      },
-      crop: {
-        type: Sequelize.STRING
-      },
-      acreage: {
+      comment: {
         type: Sequelize.STRING
       },
       createdAt: {
@@ -34,6 +28,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('fields');
+    return queryInterface.dropTable('comments');
   }
 };
