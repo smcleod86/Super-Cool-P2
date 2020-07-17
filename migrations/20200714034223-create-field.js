@@ -17,6 +17,12 @@ module.exports = {
       acreage: {
         type: Sequelize.STRING
       },
+      long: {
+        type: Sequelize.INTEGER
+      },
+      lat: {
+        type: Sequelize.INTEGER
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

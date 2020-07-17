@@ -68,6 +68,9 @@ app.get('/', (req, res) => {
     res.render('home')
 })
 
+// controller for fields
+app.use('/fields', require('./controllers/fields'))
+
 // Initialize app on port
 app.listen(process.env.PORT || 3000, function (port) {
     console.log(`Listening to port ${process.env.PORT}.`)
