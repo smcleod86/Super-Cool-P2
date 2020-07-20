@@ -10,8 +10,8 @@ const geocodingClient = mbxGeocoding({accessToken: process.env.MAPBOX_TOKEN})
 // Stubbed homeroute for search
 router.get('/', (req, res) => {
     geocodingClient.forwardGeocode({
-        query: `${req.query.city}, ${req.query.state}`
-        //query: `${req.query.lng}, ${req.query.lat}`
+        //query: `${req.query.city}, ${req.query.state}`
+        query: `${req.query.lng}, ${req.query.lat}`
     })
     .send()
     .then(response => {

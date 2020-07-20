@@ -6,17 +6,17 @@ const errorHandler = error => {
 }
 
 // CREATE
-// create crops
-db.field.create({
-  unit: "U-77",
-  crop: "corn",
-  acreage: "295 acres",
-  long: 45,
-  lat: 45
-}).then(fieldData => {
-  console.log(`🥔🥔🥔🥔🥔`)
-  console.log(fieldData)
-}).catch(errorHandler)
+// create fields
+// db.field.create({
+//   unit: "U-77",
+//   crop: "corn",
+//   acreage: "295 acres",
+//   long: 119,
+//   lat: 46
+// }).then(fieldData => {
+//   console.log(`🥔🥔🥔🥔🥔`)
+//   console.log(fieldData)
+// }).catch(errorHandler)
 
 // console.log("🥱🥱🥱🥱🥱adding stuff is exhasting")
 
@@ -31,3 +31,10 @@ db.field.create({
 // }).catch(errorHandler)
 
 // console.log("🥱🥱🥱🥱🥱adding stuff is exhasting")
+
+INSERT INTO fields
+(unit, crop, acreage, long, lat)
+VALUES
+(44, "pototo", "135 acres", -119, 46)
+
+sequelize model:create --name fields --attributes unit:integer,crop:string,acreage:string,long:integer,lat:integer

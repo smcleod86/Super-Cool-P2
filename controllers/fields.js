@@ -1,4 +1,5 @@
 require('dotenv').config()
+const db = require('../models')
 let router = require('express').Router()
 
 // Requireing our mapbox geocoder
@@ -14,6 +15,15 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
     res.send(req.params.id)
+})
+
+router.get('/profile', (req, res)  => {
+    // db.fields.findAll()
+    // .then((fields) => {
+    //     res.send('views/profile', { fields: field}) 
+    // }).catch((error) => {
+    //     console.log("big fail")
+    // })
 })
 
 module.exports = router

@@ -3,7 +3,20 @@
 
 <h2>Search for a City!</h2>
 <form method="GET" action="/search">
-    <input type="text" name="city" placeholder="City">
-    <input type="text" name="state" placeholder="State">
+    <input type="text" name="lng" placeholder="Longitude">
+    <input type="text" name="lat" placeholder="Latitude">
     <input type="submit">
 </form>
+
+<h3>fields list</h3>
+
+<div class="fieldList">
+    <ul>
+        <% forEach db.fields.forEach(function(field)) { %>
+        <h1>
+            <%= field.unit %>
+        </h1>
+        <% } %>
+    </ul>
+
+</div>

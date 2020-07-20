@@ -9,7 +9,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       unit: {
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER
       },
       crop: {
         type: Sequelize.STRING

@@ -54,7 +54,13 @@ app.get('/', function (req, res) {
 })
 
 app.get('/profile', isLoggedIn, function(req, res) {
-    res.render('profile')
+    db.fields.findAll()
+    .then((fields) => {
+        res.render('profile', { fields: field}) 
+    }).catch((error) => {
+        console.log("big fail")
+    })
+    //res.render('profile')
 })
 
 // include auth controller
@@ -64,7 +70,7 @@ app.use('/auth', require('./controllers/auth'))
 // include search controller
 app.use('/search', require('./controllers/search'))
 
-app.get('/', (req, res) => {
+app.get('/', function (req, res) {
     res.render('home')
 })
 
