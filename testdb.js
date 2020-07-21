@@ -7,18 +7,18 @@ const errorHandler = error => {
 
 // CREATE
 // create fields
-// db.field.create({
-//   unit: "U-77",
-//   crop: "corn",
-//   acreage: "295 acres",
-//   long: 119,
-//   lat: 46
-// }).then(fieldData => {
-//   console.log(`🥔🥔🥔🥔🥔`)
-//   console.log(fieldData)
-// }).catch(errorHandler)
+db.field.create({
+  unit: "U 77",
+  crop: "corn",
+  acreage: "295 acres",
+  long: -119,
+  lat: 46
+}).then(fieldData => {
+  console.log(`🥔🥔🥔🥔🥔`)
+  console.log(fieldData)
+}).catch(errorHandler)
 
-// console.log("🥱🥱🥱🥱🥱adding stuff is exhasting")
+console.log("🥱🥱🥱🥱🥱adding stuff is exhasting")
 
 
 // db.comment.create({
@@ -32,9 +32,12 @@ const errorHandler = error => {
 
 // console.log("🥱🥱🥱🥱🥱adding stuff is exhasting")
 
-INSERT INTO fields
-(unit, crop, acreage, long, lat)
-VALUES
-(44, "pototo", "135 acres", -119, 46)
+// INSERT INTO fields
+// (unit, crop, acreage, long, lat)
+// VALUES
+// ("U 77", "pototo", "135 acres", -119, 46)
 
-sequelize model:create --name fields --attributes unit:integer,crop:string,acreage:string,long:integer,lat:integer
+// sequelize model:create --name field --attributes unit:string,crop:string,acreage:string,long:integer,lat:integer
+
+// models.field.hasMany(models.comment)
+// models.field.belongsToMany(models.user, { through: "usersfields" })
